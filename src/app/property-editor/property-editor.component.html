@@ -1,0 +1,141 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+    <div class="container pt-3">
+
+        <h3>Overview</h3>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Name</label>
+                <input type="text" formControlName="name" class="form-control"
+                placeholder="first Name" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Description</label>
+                <input type="text" formControlName="description" class="form-control" id="inputPassword4">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Accomodation Type</label>
+            <input type="text" class="form-control" formControlName="accomodationType" id="inputAddress"
+                placeholder="1234 Main St">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Address</label>
+                <input type="email" formControlName="address" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Town</label>
+                <input type="text" formControlName="town" class="form-control" id="inputPassword4">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Postcode</label>
+            <input type="text" class="form-control" formControlName="postcode" id="inputAddress"
+                placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Bathroom count</label>
+            <input type="text" class="form-control" formControlName="bathroomCount" id="inputAddress2"
+                placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Bedroom count</label>
+            <input type="text" class="form-control" formControlName="bedroomCount" id="inputAddress2"
+                placeholder="Apartment, studio, or floor">
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress2">Furnished</label>
+            <input type="text" class="form-control" formControlName="furnished" id="inputAddress2"
+                placeholder="Apartment, studio, or floor">
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress2">Rent</label>
+            <input type="text" class="form-control" formControlName="rent" id="inputAddress2"
+                placeholder="Apartment, studio, or floor">
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress2">Average Bills</label>
+            <input type="text" class="form-control" formControlName="averageBills" id="inputAddress2"
+                placeholder="Apartment, studio, or floor">
+        </div>
+
+        <hr>
+
+        <!-- Ammenties Section of the form -->
+        <h3>Ammenities</h3>
+
+        <h5 class="mb-3">Appliances</h5>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Microwave</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Fan assisted oven</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Dishwasher</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Fridge</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Freezer</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Washing machine</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Dryer</mat-checkbox>
+            </div>
+        </div>
+
+        <h5 class="mb-3">Bathrooms</h5>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Bath</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Shower</mat-checkbox>
+            </div>
+        </div>
+
+        <h5 class="mb-3">Interior</h5>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Furnished</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Fitted Kitchen</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Kitchen table</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Fire Alarm</mat-checkbox>
+            </div>
+        </div>
+
+        <h5 class="mb-3">Exterior</h5>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Off road parking</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Garage</mat-checkbox>
+            </div>
+            <div class="form-group col-md-2">
+                <mat-checkbox class="example-margin">Garden</mat-checkbox>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+
+
+
+</form>

@@ -1,0 +1,114 @@
+<div class="wrapper">
+
+
+  <div class="sideBar">
+    <a>
+      <span>Logo</span>
+    </a>
+
+    <a routerLink="/home" routerLinkActive="active-item">
+      <span matTooltip="Browse the properties" [matTooltipPosition]="'right'">
+        <fa-icon [icon]="faThLarge"></fa-icon>
+      </span>
+    </a>
+
+    <a routerLink="/fav" routerLinkActive="active-item">
+      <span matTooltip="View your favourites" [matTooltipPosition]="'right'">
+        <fa-icon [icon]="faHeart"></fa-icon>
+      </span>
+    </a>
+
+    <a routerLink="/communities" routerLinkActive="active-item">
+      <span matTooltip="Browse community favourites" [matTooltipPosition]="'right'">
+        <fa-icon [icon]="faUsers"></fa-icon>
+      </span>
+    </a>
+
+    <a routerLink="/settings" routerLinkActive="active-item">
+      <span matTooltip="Settings" [matTooltipPosition]="'right'">
+        <fa-icon [icon]="faCog"></fa-icon>
+      </span>
+    </a>
+
+  </div>
+
+  <div class="mainContentWrapper">
+
+    <div class="topNav">
+
+      <div class="topNavWrapper">
+
+        <div class="topNavContainer">
+
+          <div class="search">
+
+            <div class="search-container">
+              <input type="text" placeholder="search for properties...">
+              <span class="icon">
+                <fa-icon [icon]="faSearch"></fa-icon>
+              </span>
+            </div>
+
+          </div>
+
+          <div class="links">
+
+            <!---
+            <div class="item notImportant">
+              <a>Resources</a>
+            </div>
+
+            <div class="item">
+              <a>Pricing</a>
+            </div>
+
+            <div class="item">
+              <a>Github</a>
+            </div>
+            --->
+
+            <div class="item">
+
+              <!--- For now we can hide the username 
+              <span [matMenuTriggerFor]="appMenu"
+                *ngIf="authService.userDetails">{{ authService.userDetails.displayName | titlecase }}</span>
+              -->
+              
+              <span class="ml-2" [matMenuTriggerFor]="appMenu" *ngIf="authService.isLoggedIn"><img
+                  src="https://www.gravatar.com/avatar/7475ff998c0f34db60aedf3e2e80f27b?s=48&d=identicon&r=PG&f=1"></span>
+
+              <!-- Menu displayed when the username is clicked -->
+              <mat-menu #appMenu="matMenu">
+                <button mat-menu-item>Profile</button>
+                <button mat-menu-item>Settings</button>
+                <button (click)="authService.logout()" mat-menu-item>Logout</button>
+              </mat-menu>
+
+              <button routerLink="/login" *ngIf="!authService.isLoggedIn" type="button">GET STARTED</button>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="content">
+      <div class="main">
+        <router-outlet>
+        </router-outlet>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>

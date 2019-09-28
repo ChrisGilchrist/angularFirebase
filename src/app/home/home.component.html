@@ -1,0 +1,56 @@
+<!-- Explore Section -->
+<section class="sections">
+
+    <h4 class="sectionHeaders mt-2">Explore AirBnb</h4>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" *ngFor="let option of filterOptions">
+            <button mat-stroked-button class="w-100">
+                {{ option }}
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Popular Locations Section 
+<section class="sections">
+    <div class="container">
+
+        <h4 class="sectionHeaders">Popular Locations</h4>
+
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3" *ngFor="let location of locations">
+                <div class="location">
+                    <div class="img-container">
+                        <span></span>
+                        <img
+                            src="https://a0.muscache.com/im/pictures/dfce93fe-727a-4b1b-bb98-e8102ec633b3.jpg?aki_policy=large">
+
+                        <div class="locationInfo">
+                            <div class="info">
+                                <div class="name">{{ location.location }}</div>
+                                <div class="count">{{ location.noOfProperties }} properties</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!-- Recently Added Section -->
+<section class="sections">
+
+    <h4 class="sectionHeaders">Properties Recently Added</h4>
+
+    <div class="row">
+        <div (click)="openDialog(item)" class="col-xs-6 col-sm-6 col-md-6 col-lg-3" *ngFor="let item of realResults | async">
+            <app-list-item [property]="item"></app-list-item>
+        </div>
+    </div>
+</section>

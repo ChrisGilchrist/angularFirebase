@@ -1,0 +1,153 @@
+.wrapper {
+
+    .sideBar {
+        background: white;
+        display:flex;
+        position:fixed;
+        left:0;
+        top:0;
+        z-index: 999;
+        text-align: center;
+        flex-direction: column;
+        width:95px;
+
+        a {
+            margin: 20px auto;
+            cursor: pointer;
+            font-size:20px;
+            transition: 0.3s;
+            color:#babec9 !important;
+        }
+
+        a:hover {
+            color:#6c5ce7;
+        }
+
+        .active-item {
+            color: #6c5ce7 !important;
+        }
+    }
+
+    .mainContentWrapper {
+
+        padding-left:95px;
+        background:white;
+
+        .topNav {
+            z-index: 999;
+            position:fixed;
+            right:0;
+            left:105px;
+            min-height:76px;
+            border-bottom:1px solid rgba(0,0,0,.1);
+            color:#414141;
+            background-color: white;
+
+            .topNavWrapper {
+                height:76px;
+                display: flex;
+                align-items: center;
+
+                .topNavContainer {
+                    width:100%;
+                    min-width: 160px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: space-between;
+
+                    .search {
+                        max-width:842;
+                        flex-grow: 1;
+                        padding-right:5%;
+
+                        .search-container {
+                            height:100%;
+                            display: flex;
+                            align-items: center;
+                            width:100%;
+                            position: relative;
+                            max-width:800px;
+
+                            input {
+                                width:100%;
+                                padding: 0 17px;
+                                vertical-align: middle;
+                                height: 46px;
+                                background: #f6f6f6;
+                                border:none;
+                                outline:none;
+                                border-radius:5px;
+                            }
+
+                            .icon {
+                                position: absolute;
+                                right:15px;
+                                color:#878c9a;
+                            }
+
+                        }
+                    }
+
+                    .links {
+                        padding-right:30px;
+                        font-size:18px;
+                        align-items: center;
+                        display: flex;
+
+                        .item {
+                            display: inline-block;
+
+                            span {
+                                cursor: pointer;
+                            }
+
+                            img {
+                                margin-left:10px;
+                                height:25px;
+                            }
+                            
+                            a {
+                                margin:0 15px;
+                                cursor:pointer;
+                            }
+
+                            button {
+                                width:172px;
+                                padding:10px 20px;
+                                background-color:#6c5ce7;
+                                color:white;
+                                font-weight: 600;
+                                border:none;
+                                outline:none;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding-top:76px;
+            min-height:calc(100vh - 96px);
+            display: block;
+
+            .main {
+                padding:0 10px;
+            }
+
+        }
+
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .notImportant {
+        display:none;
+    }
+
+  }
+

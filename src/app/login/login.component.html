@@ -1,0 +1,74 @@
+<!---
+<div class="container">
+    <input type="text" [(ngModel)]="username">
+    <input type="text" [(ngModel)]="email">
+    <input type="text" [(ngModel)]="password">
+    <button (click)="authService.loginWithEmail(email, password, username)">login</button>
+    <button (click)="authService.loginWithFacebook()">login with facebook</button>
+    <button (click)="authService.loginWithGoogle()">login with google</button>
+</div>-->
+
+<!-- Tablet / Desktop friendly login -->
+<div class="page-wrapper">
+    <div class="container" id="container" [ngClass]="signIn ? 'right-panel-active' : ''">
+        <div class="form-container sign-up-container">
+            <form [formGroup]="form">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a class="social" (click)="authService.loginWithFacebook()">
+                        <fa-icon [icon]="faFacebookF"></fa-icon>
+                    </a>
+                    <a class="social">
+                        <fa-icon [icon]="faGoogle" (click)="authService.loginWithGoogle()"></fa-icon>
+                    </a>
+                    <a class="social">
+                        <fa-icon [icon]="faTwitter" (click)="authService.loginWithTwitter()"></fa-icon>
+                    </a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Username" formControlName="username" />
+                <input type="email" placeholder="Email" formControlName="email" />
+                <input type="password" placeholder="Password" formControlName="password" />
+                <button (click)="authService.registerWithEmail(email, password, username)">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form [formGroup]="form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a class="social" (click)="authService.loginWithFacebook()">
+                        <fa-icon [icon]="faFacebookF"></fa-icon>
+                    </a>
+                    <a class="social">
+                        <fa-icon [icon]="faGoogle" (click)="authService.loginWithGoogle()"></fa-icon>
+                    </a>
+                    <a class="social">
+                        <fa-icon [icon]="faTwitter" (click)="authService.loginWithTwitter()"></fa-icon>
+                    </a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" formControlName="email" />
+                <input type="password" placeholder="Password" formControlName="password" />
+                <a href="#">Forgot your password?</a>
+                <button (click)="authService.loginWithEmail(email, password)">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn" (click)="signIn = false">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp" (click)="signIn = true">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Mobile Friendly Login -->

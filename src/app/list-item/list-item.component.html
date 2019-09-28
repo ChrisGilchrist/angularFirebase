@@ -1,0 +1,14 @@
+<div class="list-item">
+    <div class="img-container">
+        <img src="https://a0.muscache.com/im/pictures/812e040f-6f6f-4cae-ad67-66c050b57c1f.jpg?aki_policy=large">
+        <span class="hover-cover"></span>
+    </div>
+
+    <div *ngIf="property" class="item-info mt-2">
+        <div class="type">{{ property.type }}</div>
+        <div class="name">{{ property.name }}</div>
+        <div class="description">
+                {{ property.description }}
+        </div>
+    </div>
+</div>

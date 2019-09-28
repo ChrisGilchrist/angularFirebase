@@ -1,0 +1,110 @@
+.communities {
+
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+          display: grid;
+          grid-template-rows: auto;
+          column-gap: 30px;
+          row-gap: 30px;
+          max-width: 1300px;
+
+        .grid-item {
+
+            .card {
+                border:none;
+                padding:20px;
+                padding-top:35px;
+                background: #fff;
+                border-radius:5px;
+                min-height: 100%;
+                position: relative;
+                top: 0;
+                transition: all .1s ease-in; 
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,.04), 0 4px 5px 0 rgba(0,0,0,.04), 0 1px 10px 0 rgba(0,0,0,.05);
+                cursor: pointer;
+            }
+
+            .card:hover {
+                box-shadow: 0 2px 4px 0 rgba(0, 110, 255, 0.04), 0 4px 5px 0 rgba(0, 110, 255, 0.04), 0 1px 10px 0 rgba(0, 110, 255, 0.04);
+            }
+
+            .pic-section {
+
+                .image-holder {
+                    overflow:hidden;
+                    margin:0 auto;
+                    border-radius:50%;
+                    height:80px;
+                    width:80px;
+                    background-color:#ff3c41;
+                    display:flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size:40px;
+                    color:white;
+                }
+
+            }
+
+            .name-section {
+                margin-top:10px;
+                text-align:center;
+              
+                p {
+                  margin:0;
+                  padding:0;
+                }
+                
+                .name {
+                  margin-top:10px;
+                  font-weight:600;
+                  font-size:20px;
+                }
+                
+                .title {
+                  color:#7E909A;
+                }
+            }
+
+            .test {
+                margin:0 auto;
+            
+
+            .members-section {
+                margin-top:20px;
+                display:grid;
+                width:50%;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                column-gap:5px;
+                
+                .member {
+                  overflow:hidden;
+                  margin:0 auto;
+                  border-radius:50%;
+                  height:35px;
+                  width:35px;
+                  background-image: url("https://randomuser.me/api/portraits/men/32.jpg");
+                  background-position: center center;
+                  background-size: cover;
+                }
+                
+                .more {
+                  font-size:13px;
+                  background:none;
+                  background-color:#0091D5;
+                  color:white;
+                  display:flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  text-align: center;
+                }
+              }
+            }
+
+
+        }
+
+    }
+    
+}

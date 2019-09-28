@@ -1,0 +1,17 @@
+<section class="sections" *ngIf="loggedIn">
+
+    <h4 class="sectionHeaders mt-2">Favourite properties</h4>
+    
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" *ngFor="let item of properties" (click)="openDialog(item)">
+            <app-list-item [property]="item"></app-list-item>
+        </div>
+    </div>
+
+</section>
+
+<section *ngIf="!loggedIn">
+
+    <p>Log in to ssee them</p>
+
+</section>

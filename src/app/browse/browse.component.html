@@ -1,0 +1,28 @@
+
+<div class="cust-container">
+
+
+    <h3>Recommended for you</h3>
+    <div class="row no-gutter mb-3">
+
+        <div class="col-3" *ngFor="let house of results">
+
+            <div class="card mb-3">
+                <img class="card-img-top"
+                    src="https://a0.muscache.com/im/pictures/5109888/45382f93_original.jpg?aki_policy=large"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer text-muted">
+                    {{ house.creationDate }}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
